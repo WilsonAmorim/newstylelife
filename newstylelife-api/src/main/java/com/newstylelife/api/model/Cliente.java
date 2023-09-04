@@ -1,58 +1,28 @@
 package com.newstylelife.api.model;
 
-public class Cliente {
-	private String cpfCliente;
-	private String nome;
-	private String email;
-	private String celular;
+public class Cliente extends Pessoa {
 	private boolean status;
+	private Imovel imovel;
 	
-		
-	public Cliente(String cpfCliente, String nome, String email, String celular, boolean status) {
-		this.cpfCliente = cpfCliente;
-		this.nome = nome;
-		this.email = email;
-		this.celular = celular;
+	public Cliente(String cpf, String nome, String email, String celular, boolean status, Imovel imovel) {
+		super(cpf, nome, email, celular);
 		this.status = status;
+		this.imovel = imovel;
 	}
+		
 	
-	public String getCpfCliente() {
-		return cpfCliente;
-	}
-	public void setCpfCliente(String cpfCliente) {
-		this.cpfCliente = cpfCliente;
-	}
-	public String getNome() {
-		return nome;
-	}
-	public void setNome(String nome) {
-		this.nome = nome;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getCelular() {
-		return celular;
-	}
-	public void setCelular(String celular) {
-		this.celular = celular;
-	}
 	public boolean isStatus() {
 		return status;
 	}
 	public void setStatus(boolean status) {
 		this.status = status;
 	}
-
-	@Override
-	public String toString() {
-		return "Cliente [cpfCliente=" + cpfCliente + ", nome=" + nome + ", email=" + email + ", celular=" + celular
-				+ ", status=" + status + "]";
+	public Imovel getImovel() {
+		return imovel;
 	}
-	
+	public void setImovel(Imovel imovel) {
+		this.imovel = imovel;
+	}
 	
 	
 }
